@@ -1,0 +1,159 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    color: #333;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+
+/* Header */
+
+#header {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* About Application Section */
+
+#about-application {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-application h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+}
+
+
+/* Reviews Section */
+
+#reviews {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviews h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+}
+
+#feedback-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feedback-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-item h3 {
+    font-size: 1.5rem;
+    color: #004d40;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Feedback Submission Section */
+
+#submit-feedback {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#submit-feedback h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+}
+
+#feedback-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: #e0f2f1;
+    color: #004d40;
+}
+
+#feedback-input::placeholder {
+    color: #00796b;
+}
+
+#submit-button {
+    background: linear-gradient(135deg, #00796b, #004d40);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+#submit-button:hover {
+    background: linear-gradient(135deg, #004d40, #00332c);
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+
+#footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #004d40, #00291f);
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
