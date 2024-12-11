@@ -30,10 +30,11 @@
             <div class="feedback-item" id="feedback-1">
                 <h3>Alice</h3>
                 <p>Great security system! I feel much safer now.</p>
-            </div>
+                <span class="rating">★★★★★</span></div>
             <div class="feedback-item" id="feedback-2">
                 <h3>Bob</h3>
                 <p>There are still some blind spots in camera coverage.</p>
+                <span class="rating">★★★☆☆</span>
             </div>
         </div>
     </section>
@@ -41,6 +42,18 @@
     <!-- Feedback Submission Section -->
     <section id="submit-feedback">
         <h2>Submit Your Feedback</h2>
+
+        <!-- User's Name Input -->
+        <label for="user-name">Your Name:</label>
+        <input type="text" id="user-name" placeholder="Enter your name" required>
+
+        <div id="star-rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
         <textarea id="feedback-input" placeholder="Write your feedback here..." rows="5"></textarea>
         <button id="submit-button">Submit Feedback</button>
     </section>

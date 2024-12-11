@@ -1,159 +1,194 @@
-/* Global Reset */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* General Styles */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00796b, #004d40);
+    /* Gradient lin în culori moderne */
     color: #333;
-    line-height: 1.6;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 
 /* Header */
 
-#header {
-    background: linear-gradient(135deg, #00796b, #004d40);
-    color: white;
+header {
+    background-color: rgba(0, 121, 107, 0.9);
+    /* Culoare cu transparență */
+    padding: 20px;
     text-align: center;
-    padding: 2.5rem 0;
+    width: 100%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
     border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-#header h1 {
+header h1 {
+    margin: 0;
     font-size: 3rem;
-    font-weight: bold;
-}
-
-#header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
-/* About Application Section */
+/* Section Containers */
 
-#about-application {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#about-application h2 {
-    font-size: 2rem;
-    color: #00796b;
-    margin-bottom: 1rem;
-}
-
-
-/* Reviews Section */
-
-#reviews {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#reviews h2 {
-    font-size: 2rem;
-    color: #00796b;
-    margin-bottom: 1rem;
-}
-
-#feedback-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.feedback-item {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 1.5rem;
+section {
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+    transform: translateY(0);
+    /* Adăugăm o animație la hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+section:hover {
+    transform: translateY(-10px);
+    /* Ridicăm secțiunea când trece cursorul */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+
+/* Feedback Items */
+
+.feedback-item {
+    background-color: #fafafa;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #00796b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
 .feedback-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    /* Mică animație pentru a scoate feedback-ul în evidență */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-item h3 {
+    font-size: 1.3rem;
+    color: #00796b;
+    font-weight: 600;
+}
+
+.feedback-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.rating {
+    color: #ffc107;
     font-size: 1.5rem;
-    color: #004d40;
-    margin-bottom: 0.5rem;
 }
 
 
-/* Feedback Submission Section */
+/* Star Rating */
+
+#star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 2.5rem;
+    /* Mărim stelele pentru a arăta mai vizibil */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffc107;
+    transform: scale(1.2);
+    /* Îngroșăm stelele la hover pentru un efect mai animat */
+}
+
+
+/* Feedback Submission */
 
 #submit-feedback {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#submit-feedback h2 {
-    font-size: 2rem;
-    color: #00796b;
-    margin-bottom: 1rem;
+#submit-feedback:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#user-name,
+#feedback-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+#user-name {
+    background-color: #fafafa;
 }
 
 #feedback-input {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border: 1px solid #b2dfdb;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    background: #e0f2f1;
-    color: #004d40;
-}
-
-#feedback-input::placeholder {
-    color: #00796b;
+    background-color: #fafafa;
+    min-height: 120px;
 }
 
 #submit-button {
-    background: linear-gradient(135deg, #00796b, #004d40);
+    background-color: #00796b;
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    display: inline-block;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #submit-button:hover {
-    background: linear-gradient(135deg, #004d40, #00332c);
+    background-color: #004d40;
     transform: scale(1.05);
+    /* Îngroșăm butonul la hover */
 }
 
 
 /* Footer */
 
-#footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #004d40, #00291f);
+footer {
+    background-color: #00796b;
     color: white;
-    border-radius: 10px;
-    font-size: 0.9rem;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
 }
